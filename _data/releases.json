@@ -1,0 +1,290 @@
+[
+	{
+		"name": "0.7.0-alpha",
+		"changelog": [
+			"Rust re-write",
+			"Should be OSX and Linux compatible - not yet tested"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.0-alpha/lavendeux_0.7.0_x64_en-US.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.0-alpha/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.0-alpha",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.0-alpha.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.6.1",
+		"changelog": [
+			"Added Cygwin build",
+			"Bugfix with hotkeys and silent errors"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz",
+		}
+	},
+	
+    {
+		"name": "0.6.1 (No extensions)",
+		"changelog": [
+			"Added Cygwin build",
+			"Bugfix with hotkeys and silent errors"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz",
+		}
+	},
+	
+	{
+		"name": "Beta 0.6.0",
+		"changelog": [
+			"Added hotkey selection"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.0-beta7",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz",
+		}
+	},
+	
+	{
+		"name": "Beta 0.6.0 (No extensions)",
+		"changelog": [
+			"Added hotkey selection"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.0-beta7",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.5",
+		"changelog": [
+			"The right DLL!",
+			"New documentation link on installer"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.5 (No extensions)",
+		"changelog": [
+			"The right DLL!",
+			"New documentation link on installer"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.4",
+		"changelog": [
+			"Added new built-in functions for strings",
+			"Moved strlen to builtins",
+			"Added string concatenation",
+			"Fixed bug with base operators",
+			"Added @c/@color/@colour decorators for html color codes"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.4 (No extensions)",
+		"changelog": [
+			"Added new built-in functions for strings",
+			"Moved strlen to builtins",
+			"Added string concatenation",
+			"Fixed bug with base operators",
+			"Added @c/@color/@colour decorators for html color codes"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.3",
+		"changelog": [
+			"Removed comments, and added # as a new type of hex integer",
+			"Added capital versions of existing alternate bases (0B, 0X, 0O)",
+			"Numbers starting with 0 are now properly octal",
+			"Better string support in grammar"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.3-beta4",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.3 (No extensions)",
+		"changelog": [
+			"Removed comments, and added # as a new type of hex integer",
+			"Added capital versions of existing alternate bases (0B, 0X, 0O)",
+			"Numbers starting with 0 are now properly octal",
+			"Better string support in grammar"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.3-beta4",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.2",
+		"changelog": [
+			"Fixed a crash when repeatedly calling an extension"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.2-beta3",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.2-beta3.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.1",
+		"changelog": [
+			"Added synonyms extension",
+			"Fixed crash bug when reloading a faulty extension"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.1-beta2",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.1-beta2.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.0",
+		"changelog": [
+			"Overhaul of commandline flags",
+			"Added python extensions",
+			"Added string type"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.0-beta1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz",
+		}
+	},
+
+	{
+		"name": "Beta 0.5.0 (No extensions)",
+		"changelog": [
+			"Updated commandline flags",
+			"Added python extensions",
+			"Added string type"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-noextensions-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-noextensions.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.0-beta1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.3.1",
+		"changelog": [
+			"Added silent start option"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.1/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.1/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.3.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.1.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.3.0",
+		"changelog": [
+			"Fixed a few grammar issues",
+			"Changed how settings are integrated"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.0/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.0/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.3.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.0.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.2.0",
+		"changelog": [
+			"Deprecated a few commandline options",
+			"Added auto copy/paste",
+			"Improved memory usage",
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.2.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.2.0.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.1.1",
+		"changelog": [
+			"Added unit tests",
+			"Rebuilt binary decorator",
+			"Prepare for multiplatform compatibility",
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.1/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.1/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.1.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.1.tar.gz",
+		}
+	},
+
+	{
+		"name": "0.1.0",
+		"changelog": [
+			"Initial public release",
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.0/lavendeux-setup.exe",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.0/lavendeux.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.1.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.0.tar.gz",
+		}
+	},
+]

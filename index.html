@@ -3,4 +3,78 @@ layout: default
 permalink: /
 title: Lavendeux
 ---
-Hello World
+<div class="p-5 mb-4 bg-light rounded-3 bg-light border">
+    <div class="container-fluid py-4">
+        <h1 class="display-5 fw-bold">Lavendeux enhances the clipboard</h1>
+        <p class="fs-5">Lavendeux inlines calculating, programming and testing utilities into your favourite text editor.<p>
+        <p class="fs-5">
+            Test the result of a remote API call, check the result of a regular expression and much more, all without needing to break your workflow.
+        </p>
+        
+        <p class="fs-6">
+            Latest release: {{ site.data.releases[0].name }}
+        </p>
+        <div class="btn-group" role="group">
+            <div class="btn-group" role="group">
+                <button id="x64_win_links" type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    x64 Windows
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="x64_win_links">
+                  <li><a class="dropdown-item" href="{{ site.data.releases[0].downloads.win_install}}">Installer</a></li>
+                  <li><a class="dropdown-item" href="{{ site.data.releases[0].downloads.win_zip}}">Standalone executable</a></li>
+                </ul>
+            </div>
+            <a href="{{ site.data.releases[0].downloads.source}}" role="button" class="btn btn-outline-primary">Download source code</a>
+        </div>
+    </div>
+</div>
+
+<div class="p-3 mb-4">
+    <h3 class="display-7 fw-bold">How it works</h3>
+    <p class="fs-6">Highlight an expression, and press control space; Lavendeux will replace it with the answer.<br/>If you have it installed, try it here:</p>
+    <p class="fs-6"></p>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
+x = sqrt(256)
+2*x @hex
+</textarea>
+</div>
+
+<div class="p-3 mb-4">
+    <h4>How to use it</h4>
+    <p>Expressions can be composed of integers, floats, strings, as well as numbers of various bases:</p>
+    <pre class="code-sample" id="dataTypes-sample"></pre>
+
+    <p>Beyond the simpler operators, the following operations are supported:</p>
+    <pre class="code-sample" id="operationsSample-sample"></pre>
+
+    <p>
+        You can also assign values to variables to be used later:
+        <br />They are case sensitive, and can be composed of underscores or alphanumeric characters
+    </p>
+    <pre class="code-sample" id="variablesSample-sample"></pre>
+
+    <p>
+        Decorators can be put at the end of a line to change the output format. Valid decorators include:
+        <br /><strong>@bin, @oct, @hex, @int, @float, or @sci</strong>
+    </p>
+    <pre class="code-sample" id="decoratorsSample-sample"></pre>
+
+    <p>The following functions are supported by default:</p>
+    <pre class="code-sample" id="functionsSample-sample"></pre>
+
+    <p>
+        Lavendeux can be extended with javascript. Extensions are run in a sandboxed environment, with no network or host access.<br/>
+        Below is an example of a simple extension:
+    </p>
+    <pre class="code-sample" id="jsSample-sample"></pre>
+</div>
+
+<script src="js/help.js"></script>
+<script type="text/javascript">
+    setSample(dataTypeSample, 'dataTypes-sample');
+    setSample(operationsSample, 'operationsSample-sample');
+    setSample(variablesSample, 'variablesSample-sample');
+    setSample(decoratorsSample, 'decoratorsSample-sample');
+    setSample(functionsSample, 'functionsSample-sample');
+    setSample(jsSample, 'jsSample-sample');
+</script>

@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: /downloads
+title: Downloads
+---
+<div class="p-3 mb-4">
+    <ul class="list-group">
+    {% for release in site.data.releases %}
+        <li class="list-group-item">
+            <p class="fs-5">Version {{ release.name }}</p>
+            <div class="btn-group btn-group-sm" role="group">
+                <div class="btn-group btn-group-sm" role="group">
+                    <button id="x64_win_links" type="button" class="btn btn-sm btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        x64 Windows
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="x64_win_links">
+                      <li><a class="dropdown-item" href="{{ release.downloads.win_install }}">Installer</a></li>
+                      <li><a class="dropdown-item" href="{{ release.downloads.win_zip }}">Standalone executable</a></li>
+                    </ul>
+                </div>
+                <a href="{{ release.downloads.source }}" role="button" class="btn btn-outline-primary">Download source code</a>
+            </div>
+            
+            <div class="p-3">
+                Change log
+                <ul>
+                {% for change in release.changelog %}
+                    <li>{{ change }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
