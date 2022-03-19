@@ -1,5 +1,18 @@
 [
 	{
+		"name": "0.7.1-alpha",
+		"changelog": [
+			"Fixed a crash bug with the error modal"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.1-alpha/lavendeux_0.7.1_x64_en-US.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.1-alpha/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.1-alpha",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.1-alpha.tar.gz",
+		}
+	},
+
+	{
 		"name": "0.7.0-alpha",
 		"changelog": [
 			"Rust re-write",
