@@ -1,5 +1,18 @@
 [
 	{
+		"name": "0.7.3-alpha",
+		"changelog": [
+			"Fix several bugs"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.3-alpha/lavendeux_0.7.3_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.3-alpha/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.3-alpha",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.3-alpha.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.7.2-alpha",
 		"changelog": [
 			"Added function assignments, boolean type, and currency values"
@@ -8,7 +21,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.2-alpha/lavendeux_0.7.2_x64_en-US.msi.zip",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.2-alpha/lavendeux.exe",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.2-alpha",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.2-alpha.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.2-alpha.tar.gz"
 		}
 	},
 
@@ -21,7 +34,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.1-alpha/lavendeux_0.7.1_x64_en-US.msi.zip",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.1-alpha/lavendeux.exe",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.1-alpha",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.1-alpha.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.1-alpha.tar.gz"
 		}
 	},
 
@@ -35,7 +48,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.0-alpha/lavendeux_0.7.0_x64_en-US.zip",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.0-alpha/lavendeux.exe",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.0-alpha",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.0-alpha.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.0-alpha.tar.gz"
 		}
 	},
 
@@ -49,7 +62,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz"
 		}
 	},
 	
@@ -63,7 +76,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.1/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.1.tar.gz"
 		}
 	},
 	
@@ -76,7 +89,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.0-beta7",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz"
 		}
 	},
 	
@@ -89,7 +102,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.6.0-beta7/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.6.0-beta7",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.6.0-beta7.tar.gz"
 		}
 	},
 
@@ -103,7 +116,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz"
 		}
 	},
 
@@ -117,7 +130,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.5-beta6/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.5-beta6",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.5-beta6.tar.gz"
 		}
 	},
 
@@ -134,7 +147,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz"
 		}
 	},
 
@@ -151,7 +164,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.4-beta5/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.4-beta5",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.4-beta5.tar.gz"
 		}
 	},
 
@@ -167,7 +180,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.3-beta4",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz"
 		}
 	},
 
@@ -183,7 +196,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.3-beta4/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.3-beta4",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.3-beta4.tar.gz"
 		}
 	},
 
@@ -196,7 +209,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.2-beta3/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.2-beta3",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.2-beta3.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.2-beta3.tar.gz"
 		}
 	},
 
@@ -210,7 +223,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.1-beta2/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.1-beta2",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.1-beta2.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.1-beta2.tar.gz"
 		}
 	},
 
@@ -225,7 +238,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.0-beta1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz"
 		}
 	},
 
@@ -240,7 +253,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-noextensions-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.5.0-beta1/lavendeux-noextensions.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.5.0-beta1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.5.0-beta1.tar.gz"
 		}
 	},
 
@@ -253,7 +266,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.1/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.1/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.3.1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.1.tar.gz"
 		}
 	},
 
@@ -267,7 +280,7 @@
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.0/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.3.0/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.3.0",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.0.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.3.0.tar.gz"
 		}
 	},
 
@@ -276,13 +289,13 @@
 		"changelog": [
 			"Deprecated a few commandline options",
 			"Added auto copy/paste",
-			"Improved memory usage",
+			"Improved memory usage"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.2.0",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.2.0.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.2.0.tar.gz"
 		}
 	},
 
@@ -291,26 +304,26 @@
 		"changelog": [
 			"Added unit tests",
 			"Rebuilt binary decorator",
-			"Prepare for multiplatform compatibility",
+			"Prepare for multiplatform compatibility"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.1/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.1/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.1.1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.1.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.1.tar.gz"
 		}
 	},
 
 	{
 		"name": "0.1.0",
 		"changelog": [
-			"Initial public release",
+			"Initial public release"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.0/lavendeux-setup.exe",
 			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.1.0/lavendeux.zip",
 			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.1.0",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.0.tar.gz",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.1.0.tar.gz"
 		}
-	},
+	}
 ]
