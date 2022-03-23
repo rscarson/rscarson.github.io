@@ -1,5 +1,19 @@
 [
 	{
+		"name": "0.7.4-alpha",
+		"changelog": [
+			"New logo", "Update some dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.3-alpha/lavendeux_0.7.4_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.7.4-alpha/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.7.4-alpha",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.7.4-alpha.tar.gz"
+		}
+	},
+	
+	
+	{
 		"name": "0.7.3-alpha",
 		"changelog": [
 			"Fix several bugs"
