@@ -1,5 +1,18 @@
 [
 	{
+		"name": "0.8.1",
+		"changelog": [
+			"Fix some issues", "Prepare for Linux compatibility"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.1/lavendeux_0.8.1_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.1/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.8.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.8.1.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.8.0",
 		"changelog": [
 			"Update parser"

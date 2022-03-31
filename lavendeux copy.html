@@ -39,42 +39,8 @@ x = sqrt(256)
 </textarea>
 </div>
 
-<div class="p-3 mb-4">
-    <h4>How to use it</h4>
-    <p>Expressions can be composed of integers, floats, strings, as well as numbers of various bases:</p>
-    <pre class="code-sample" id="dataTypes-sample"></pre>
-
-    <p>Beyond the simpler operators, the following operations are supported:</p>
-    <pre class="code-sample" id="operationsSample-sample"></pre>
-
-    <p>
-        You can also assign values to variables to be used later:
-        <br />They are case sensitive, and can be composed of underscores or alphanumeric characters
-    </p>
-    <pre class="code-sample" id="variablesSample-sample"></pre>
-
-    <p>
-        Decorators can be put at the end of a line to change the output format. Valid decorators include:
-        <br /><strong>@bin, @oct, @hex, @int, @float, or @sci</strong>
-    </p>
-    <pre class="code-sample" id="decoratorsSample-sample"></pre>
-
-    <p>The following functions are supported by default:</p>
-    <pre class="code-sample" id="functionsSample-sample"></pre>
-
-    <p>
-        Lavendeux can be extended with javascript. Extensions are run in a sandboxed environment, with no network or host access.<br/>
-        Below is an example of a simple extension:
-    </p>
-    <pre class="code-sample" id="jsSample-sample"></pre>
-</div>
-
-<script src="/js/help.js"></script>
-<script type="text/javascript">
-    setSample(dataTypeSample, 'dataTypes-sample');
-    setSample(operationsSample, 'operationsSample-sample');
-    setSample(variablesSample, 'variablesSample-sample');
-    setSample(decoratorsSample, 'decoratorsSample-sample');
-    setSample(functionsSample, 'functionsSample-sample');
-    setSample(jsSample, 'jsSample-sample');
+<div class="p-3 mb-4" id="help"></div>
+<script type="module">
+    import { helpText } from '/js/help_strings.js';
+    document.getElementById("help").innerHTML = "<h4>How to use it</h4>" + helpText();
 </script>
