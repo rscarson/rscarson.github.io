@@ -1,5 +1,31 @@
 [
 	{
+		"name": "0.8.3",
+		"changelog": [
+			"Update dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.3/lavendeux_0.8.3_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.3/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.8.3",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.8.3.tar.gz"
+		}
+	},
+	
+	{
+		"name": "0.8.2",
+		"changelog": [
+			"Update dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.2/lavendeux_0.8.2_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.2/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.8.2",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.8.2.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.8.1",
 		"changelog": [
 			"Fix some issues", "Prepare for Linux compatibility"
