@@ -1,5 +1,21 @@
 [
 	{
+		"name": "0.8.4",
+		"changelog": [
+			"Add implied multiplication, for example 3x, or (3)(3)",
+			"Add help( ) function",
+			"Update parser core",
+			"Update dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.4/lavendeux_0.8.4_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.4/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.8.4",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.8.4.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.8.3",
 		"changelog": [
 			"Update dependencies"
