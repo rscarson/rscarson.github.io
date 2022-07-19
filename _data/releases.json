@@ -1,5 +1,59 @@
 [
 	{
+		"name": "0.10.0",
+		"changelog": [
+			"Add dark mode theme",
+			"Add start-with OS option",
+			"Enhance help screen",
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.10.0/lavendeux_0.10.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.10.0/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.10.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.10.0.tar.gz"
+		}
+	},
+
+	{
+		"name": "0.9.1",
+		"changelog": [
+			"Update dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.9.1/lavendeux_0.9.1_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.9.1/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.9.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.9.1.tar.gz"
+		}
+	},
+
+	{
+		"name": "0.9.0",
+		"changelog": [
+			"Add array type and associated functions"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.9.0/lavendeux_0.9.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.9.0/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.9.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.9.0.tar.gz"
+		}
+	},
+
+	{
+		"name": "0.8.5",
+		"changelog": [
+			"Update dependencies"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.5/lavendeux_0.8.5_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.8.5/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.8.5",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.8.5.tar.gz"
+		}
+	},
+
+	{
 		"name": "0.8.4",
 		"changelog": [
 			"Add implied multiplication, for example 3x, or (3)(3)",
