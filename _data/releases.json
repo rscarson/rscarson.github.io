@@ -1,5 +1,21 @@
 [
 	{
+		"name": "0.11.0",
+		"changelog": [
+			"Added logger",
+			"Added top menu bar",
+			"Added pixelart icon by daviddelmundo",
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.11.0/lavendeux_0.11.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.11.0/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.11.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.11.0.tar.gz"
+		}
+	},
+
+
+	{
 		"name": "0.10.0",
 		"changelog": [
 			"Add dark mode theme",
