@@ -5,10 +5,10 @@
 			"Update dependencies and overhaul codebase to enhance testing",
 		],
 		"downloads": {
-			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/0.12.0/lavendeux_0.12.0_x64_en-US.msi.zip",
-			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/0.12.0/lavendeux.exe",
-			"github": "https://github.com/rscarson/Lavendeux/releases/tag/0.12.0",
-			"source": "https://github.com/rscarson/Lavendeux/archive/0.12.0.tar.gz"
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.12.0/lavendeux_0.12.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.12.0/lavendeux.exe",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.12.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.12.0.tar.gz"
 		}
 	},
 	
