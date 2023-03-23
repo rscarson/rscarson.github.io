@@ -1,8 +1,27 @@
 [
 	{
+		"name": "0.20.0",
+		"changelog": [
+			"Add array datatype and several new functions",
+			"Update dependencies",
+			"Language modes",
+			"Linux compatibility",
+			"Startup script"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.0/lavendeux_0.20.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.0/lavendeux.exe",
+			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.0/lavendeux_0.20.0_amd64.deb.zip",
+			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.0/lavendeux_0.20.0_amd64.appimage.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.20.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.20.0.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.12.0",
 		"changelog": [
-			"Update dependencies and overhaul codebase to enhance testing",
+			"Update dependencies and overhaul codebase to enhance testing"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.12.0/lavendeux_0.12.0_x64_en-US.msi.zip",
@@ -15,7 +34,7 @@
 	{
 		"name": "0.11.2",
 		"changelog": [
-			"Various visual updates",
+			"Various visual updates"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.11.2/lavendeux_0.11.2_x64_en-US.msi.zip",
@@ -28,7 +47,7 @@
 	{
 		"name": "0.11.1",
 		"changelog": [
-			"Various minor bugfixes, mostly visual",
+			"Various minor bugfixes, mostly visual"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.11.1/lavendeux_0.11.1_x64_en-US.msi.zip",
@@ -43,7 +62,7 @@
 		"changelog": [
 			"Added logger",
 			"Added top menu bar",
-			"Added pixelart icon by daviddelmundo",
+			"Added pixelart icon by daviddelmundo"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.11.0/lavendeux_0.11.0_x64_en-US.msi.zip",
@@ -58,7 +77,7 @@
 		"changelog": [
 			"Add dark mode theme",
 			"Add start-with OS option",
-			"Enhance help screen",
+			"Enhance help screen"
 		],
 		"downloads": {
 			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.10.0/lavendeux_0.10.0_x64_en-US.msi.zip",

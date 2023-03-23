@@ -24,6 +24,17 @@ title: Lavendeux
                   <li><a class="dropdown-item" href="{{ site.data.releases[0].downloads.win_zip}}">Standalone executable</a></li>
                 </ul>
             </div>
+            {% if site.data.releases[0].downloads.linux_deb != nil %}
+            <div class="btn-group" role="group">
+                <button id="x64_linux_links" type="button" class="btn btn-outline-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    x64 Linux
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="x64_linux_links">
+                  <li><a class="dropdown-item" href="{{ site.data.releases[0].downloads.linux_deb}}">Deb Installer</a></li>
+                  <li><a class="dropdown-item" href="{{ site.data.releases[0].downloads.linux_appimage}}">AppImage Installer</a></li>
+                </ul>
+            </div>
+            {% endif %}
             <a href="{{ site.data.releases[0].downloads.source}}" role="button" class="btn btn-outline-primary">Download source code</a>
         </div>
     </div>
