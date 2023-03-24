@@ -1,5 +1,20 @@
 [
 	{
+		"name": "0.20.1",
+		"changelog": [
+			"Fix directory creation issue"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.1/lavendeux_0.20.1_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.1/lavendeux.exe",
+			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.1/lavendeux_0.20.1_amd64.deb.zip",
+			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.1/lavendeux_0.20.1_amd64.appimage.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.20.1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.20.1.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.20.0",
 		"changelog": [
 			"Add array datatype and several new functions",
