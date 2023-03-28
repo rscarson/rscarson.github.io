@@ -1,5 +1,22 @@
 [
 	{
+		"name": "0.20.2",
+		"changelog": [
+			"Update Enigo",
+			"Add additional keyboard shortcut options",
+			"Various visual fixes, mostly for extensions"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.2/lavendeux_0.20.2_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.2/lavendeux.exe",
+			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.2/lavendeux_0.20.2_amd64.deb.zip",
+			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v0.20.2/lavendeux_0.20.2_amd64.appimage.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.20.2",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.20.2.tar.gz"
+		}
+	},
+	
+	{
 		"name": "0.20.1",
 		"changelog": [
 			"Fix directory creation issue"
