@@ -1,4 +1,4 @@
-import sampleJSON from './samples.json' assert { type: "json" };
+import sampleJSON from './samples.js';
 
 import { LavendeuxFormatter } from './lavendeux.js';
 import { JavascriptFormatter } from './javascript.js';

@@ -1,4 +1,4 @@
-{
+export default {
     "example": [
         "x = 8 + 3e+2",
         "x = sqrt(16)",
