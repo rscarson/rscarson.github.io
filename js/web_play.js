@@ -1,4 +1,4 @@
-import 'zarbans_grotto.js';
+import './zarbans_grotto.js';
 
 const player = new Zarban.Player();
 

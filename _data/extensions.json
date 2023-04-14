@@ -17,7 +17,7 @@
 		"name": "HTML Colour Utilities",
 		"author": "rscarson",
 		"description": "A Lavendeux extension for manipulating HTML colour codes",
-		"github": "https://github.com/jf908/lavendeux-emoji",
-		"download": "https://github.com/jf908/lavendeux-emoji/releases/latest/download/emoji.js"
+		"github": "https://github.com/rscarson/lavendeux-colour",
+		"download": "https://github.com/rscarson/lavendeux-colour/releases/latest/download/lavendeux-colour.js"
 	}
 ]

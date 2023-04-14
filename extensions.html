@@ -20,8 +20,8 @@ title: Extensions
                 {{ extension.description }}
             </p>
             <div class="btn-group btn-group-sm" role="group">
-                <a href="{{ release.downloads.source }}" role="button" class="btn btn-outline-dark">View on Github</a>
-                <a href="{{ release.downloads.source }}" role="button" class="btn btn-outline-primary">Download Extension</a>
+                <a href="{{ extension.github }}" role="button" class="btn btn-outline-dark">View on Github</a>
+                <a href="{{ extension.download }}" role="button" class="btn btn-outline-primary">Download Extension</a>
             </div>
         </li>
     {% endfor %}
