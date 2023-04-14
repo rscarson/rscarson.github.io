@@ -1,0 +1,41 @@
+html,body {
+    background-color: #333;
+    color: #00AA20;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#zarban_gameboard {
+    border: 1px solid #00AA20;
+    border-width: 4px;
+    border-style: double;
+    padding: 10px;
+}
+
+#zarban_gameboard h4 {
+    border-bottom: 1px solid #00AA20;
+    margin-top: -10px;
+}
+
+#zarban_cursor {
+    margin-top: 1em;
+    animation: blinker 1s step-start infinite;
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+button {
+    background-color: #333;
+    color: #00AA20;
+    border: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-top: 10px;
+    font-size: 1em;
+}
+
+button:hover {
+    color: #00CC40;
+}

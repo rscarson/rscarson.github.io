@@ -1,0 +1,23 @@
+[
+	{
+		"name": "lavendeux-js",
+		"author": "jf908",
+		"description": "A Lavendeux extension for evaluating JavaScript code",
+		"github": "https://github.com/jf908/lavendeux-js",
+		"download": "https://github.com/jf908/lavendeux-js/releases/latest/download/lavendeux-js.js"
+	},
+	{
+		"name": "lavendeux-emoji",
+		"author": "jf908",
+		"description": "A Lavendeux extension for resolving GitHub emoji shortcodes",
+		"github": "https://github.com/jf908/lavendeux-emoji",
+		"download": "https://github.com/jf908/lavendeux-emoji/releases/latest/download/emoji.js"
+	},
+	{
+		"name": "HTML Colour Utilities",
+		"author": "rscarson",
+		"description": "A Lavendeux extension for manipulating HTML colour codes",
+		"github": "https://github.com/jf908/lavendeux-emoji",
+		"download": "https://github.com/jf908/lavendeux-emoji/releases/latest/download/emoji.js"
+	}
+]

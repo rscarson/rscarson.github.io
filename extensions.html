@@ -1,0 +1,29 @@
+---
+layout: lavendeux
+permalink: /lavendeux/extensions
+title: Extensions
+---
+<div class="p-3 mb-4">
+    <ul class="list-group">
+    {% for extension in site.data.extensions %}
+        <li class="list-group-item">
+            <p class="fs-4">                
+                <small style="padding-right: 30px;">
+                    <a href="https://github.com/{{ extension.author }}">
+                        <img src="https://avatars.githubusercontent.com/{{ extension.author }}" width="24" height="24" alt="@{{ extension.author }}" style="border-radius: 50%;" /> 
+                        {{ extension.author }}
+                    </a>
+                </small>
+                {{ extension.name }}
+            </p>
+            <p class="fs-7">
+                {{ extension.description }}
+            </p>
+            <div class="btn-group btn-group-sm" role="group">
+                <a href="{{ release.downloads.source }}" role="button" class="btn btn-outline-dark">View on Github</a>
+                <a href="{{ release.downloads.source }}" role="button" class="btn btn-outline-primary">Download Extension</a>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
