@@ -741,7 +741,7 @@ const chapters = [
             type: "status",
             target: "stamina",
             operation: "add",
-            value: 3
+            value: 1
           },
           {
             type: "inventory",
@@ -1035,7 +1035,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1049,7 +1049,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1087,7 +1087,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1101,7 +1101,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1134,7 +1134,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1148,7 +1148,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1191,7 +1191,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1205,7 +1205,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1242,7 +1242,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1256,7 +1256,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1285,7 +1285,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1299,7 +1299,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1330,7 +1330,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1344,7 +1344,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1387,7 +1387,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1401,7 +1401,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1430,7 +1430,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1444,7 +1444,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1474,7 +1474,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1488,7 +1488,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1519,7 +1519,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "eq"
               }
             ],
@@ -1533,7 +1533,7 @@ const chapters = [
               {
                 type: "status",
                 target: "alcoholism",
-                value: 4,
+                value: 2,
                 operation: "lt"
               }
             ],
@@ -1774,6 +1774,22 @@ const chapters = [
             conditions: [],
             results: [
               "village_farm"
+            ]
+          }
+        ]
+      },
+      village_farm_amelie_unusual: {
+        text: [
+          '"Unusual?" The young woman laughs',
+          `"Honey, having a stranger on our farm is the most unusual thing that's happened in recent memory."`
+        ],
+        effects: [],
+        options: [
+          {
+            prompt: "Ask her something else",
+            conditions: [],
+            results: [
+              "village_farm_amelie"
             ]
           }
         ]
@@ -2184,7 +2200,13 @@ const chapters = [
           },
           {
             prompt: "Ask about the strange items in her home",
-            conditions: [],
+            conditions: [
+              {
+                type: "choices",
+                target: "snooped_on_teacher",
+                value: true
+              }
+            ],
             results: [
               "village_school_items"
             ]
@@ -2662,7 +2684,7 @@ const chapters = [
       },
       church_gaylen_temple: {
         text: [
-          '"This temple was founded over 700 years ago during the time of the Arameic Order."',
+          '"This temple was founded over 700 years ago during the time of the Aremeic Order."',
           '"It was personally commisioned by the famed vampire hunter, and knight of the order Edwin Rothsten."',
           '"The legend himself is entombed here, where himself and his enchanted blade Moonsbane can watch over us."',
           "",
@@ -2728,7 +2750,7 @@ const chapters = [
       },
       church_graveyard: {
         text: [
-          "You arrive at the humble graveyard. In its center lies an ornate tomb marked 'Edwin Rothsten, Hunter of the Arameic Order'",
+          "You arrive at the humble graveyard. In its center lies an ornate tomb marked 'Edwin Rothsten, Hunter of the Aremeic Order'",
           "The family grave of the Audemars clan sits nearby."
         ],
         effects: [],
@@ -3157,7 +3179,7 @@ const chapters = [
             prompt: "Confront the old farmer",
             conditions: [],
             results: [
-              "jaccuse_arnoulf"
+              "jaccuse_farm_arnoulf"
             ]
           },
           {
@@ -3382,7 +3404,8 @@ const chapters = [
       jaccuse_mill: {
         text: [
           "You burst into the stone building and charge to the far side of the room, where the family sits around a fireplace.",
-          "They look up in confused horror at the unexpected home invasion."
+          "They look up in confused horror at the unexpected home invasion.",
+          "A bandage is wrapped around the baker's hand, clearly a fresh wound."
         ],
         effects: [],
         options: [
@@ -3614,12 +3637,12 @@ const status = {
     stamina: {
       hidden: false,
       "default": 0,
-      maximum: 10
+      maximum: 3
     },
     alcoholism: {
       hidden: true,
       "default": 0,
-      maximum: 4
+      maximum: 2
     }
   }
 };
