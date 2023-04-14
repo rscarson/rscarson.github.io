@@ -2865,7 +2865,7 @@ const chapters = [
         effects: [
           {
             type: "inventory",
-            target: "hunter_sword",
+            target: "magic_sword",
             value: true
           },
           {
@@ -2898,7 +2898,7 @@ const chapters = [
         effects: [
           {
             type: "inventory",
-            target: "hunter_sword",
+            target: "magic_sword",
             value: true
           },
           {
@@ -3152,7 +3152,7 @@ const chapters = [
                 conditions: [
                   {
                     type: "inventory",
-                    target: "hunter_sword",
+                    target: "magic_sword",
                     value: true
                   }
                 ],
@@ -3210,7 +3210,7 @@ const chapters = [
                 conditions: [
                   {
                     type: "inventory",
-                    target: "hunter_sword",
+                    target: "magic_sword",
                     value: true
                   }
                 ],
