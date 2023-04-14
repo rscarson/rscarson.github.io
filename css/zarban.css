@@ -28,15 +28,16 @@ html,body {
     }
 }
 
-button {
+a {
     background-color: #333;
     color: #00AA20;
-    border: none;
     font-family: "Lucida Console", "Courier New", monospace;
-    padding-top: 10px;
+    display: block;
+    margin-top: 10px;
     font-size: 1em;
+    text-decoration: none;
 }
 
-button:hover {
+a:hover {
     color: #00CC40;
 }
