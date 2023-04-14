@@ -339,7 +339,7 @@ class PlayerEffect {
    */
   apply(player, skip_inv_queue = false) {
     if (this.target == "all") {
-      return player[this.type].list().map((e) => this.applyToTarget(e, player[this.type])).filter((e) => e == false).length == 0;
+      player[this.type].list().map((e) => this.applyToTarget(e, player[this.type])).filter((e) => e == false).length == 0;
     } else {
       this.applyToTarget(this.target, player[this.type]);
     }
@@ -741,7 +741,7 @@ const chapters = [
             type: "status",
             target: "stamina",
             operation: "add",
-            value: 1
+            value: 2
           },
           {
             type: "inventory",
@@ -3121,7 +3121,7 @@ const chapters = [
             prompt: "Confront the old farmer",
             conditions: [],
             results: [
-              "jaccuse_arnoulf"
+              "jaccuse_farm_arnoulf"
             ]
           },
           {
@@ -3597,12 +3597,12 @@ const inventory = {
       ]
     },
     magic_sword: {
-      description: "Enchanted shortsword",
+      description: "Moonsbane",
       equipped: false,
       effects: []
     },
     ancient_armor: {
-      description: "Ancient vampire hunter's armor",
+      description: "Edwin Rothsten's armor",
       equipped: false,
       effects: [
         {
