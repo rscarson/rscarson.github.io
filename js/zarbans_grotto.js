@@ -1664,7 +1664,7 @@ const chapters = [
             ]
           },
           {
-            prompt: "Go back to the tavern",
+            prompt: "Search the tavern",
             conditions: [],
             results: [
               {
