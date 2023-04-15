@@ -3654,7 +3654,7 @@ const player_data = {
   inventory,
   status
 };
-class Player {
+let Player$1 = class Player2 {
   constructor(json) {
     if (json === void 0) {
       JsonUtilities.assign(this, player_data);
@@ -3726,7 +3726,7 @@ class Player {
    * @returns a copy of the player
    */
   getAdjustedStats() {
-    let playerCopy = new Player(this);
+    let playerCopy = new Player2(this);
     for (const effect of this.inventory.activeEffects()) {
       effect.apply(playerCopy);
     }
@@ -3751,9 +3751,9 @@ class Player {
    * @returns String
    */
   save() {
-    return Buffer.from(
-      JSON.stringify(this)
-    ).toString("base64");
+    return encodeURIComponent(
+      typeof Buffer !== "undefined" ? Buffer.from(JSON.stringify(this)).toString("base64") : btoa(JSON.stringify(this))
+    );
   }
   /**
    * Restore a game save from the save data
@@ -3762,11 +3762,11 @@ class Player {
    */
   static restore(data) {
     let unpacked = JSON.parse(
-      Buffer.from(data, "base64").toString("ascii")
+      typeof Buffer !== "undefined" ? Buffer.from(decodeURIComponent(data), "base64").toString("ascii") : atob(decodeURIComponent(data))
     );
-    return new Player(unpacked);
+    return new Player2(unpacked);
   }
-}
+};
 class Interface {
   static getTitledBox(title, inner_text_lines) {
     let box_width = Math.max(...inner_text_lines.map((l) => l.length).concat([title.length])) + 2;
@@ -3825,7 +3825,92 @@ class Interface {
       ...prompt
     ].join("\n");
   }
+  static getInterfaceStrings(player) {
+    const stats = player.getAdjustedStats();
+    return {
+      title: stats.currentChapter.name,
+      description: [
+        ...stats.currentStory.text,
+        "",
+        ...stats.status.list_visible().map((s) => `${s}: ${stats.status.get(s).value}/${stats.status.get(s).maximum}`),
+        "",
+        "Equipment:",
+        ...stats.inventory.all_equipped().map((i) => `- ${i.description}`)
+      ],
+      options: stats.currentStory.options.filter((o) => stats.validateConditions(o.conditions))
+    };
+  }
 }
+const ZARBAN_GAMEBOARD_CLASS = "zarban_gameboard";
+const ZARBAN_CONTROLS_CLASS = "zarban_controls";
+class ZarbanWebPlayer {
+  static init(container) {
+    const gameBoard = document.createElement("div");
+    gameBoard.className = ZARBAN_GAMEBOARD_CLASS;
+    container.appendChild(gameBoard);
+    const gameControls = document.createElement("div");
+    gameControls.className = ZARBAN_CONTROLS_CLASS;
+    container.appendChild(gameControls);
+    container.dataZarbanPlayer = new Player$1();
+    ZarbanWebPlayer.restore(container);
+  }
+  static save(container) {
+    localStorage[`zarban_${container.id}`] = container.dataZarbanPlayer.save();
+  }
+  static restore(container) {
+    const data = localStorage[`zarban_${container.id}`];
+    if (data) {
+      container.dataZarbanPlayer = Player$1.restore(data);
+    }
+    ZarbanWebPlayer.draw(container);
+  }
+  static draw(container) {
+    const strings = Interface.getInterfaceStrings(container.dataZarbanPlayer);
+    const gameboard = container.getElementsByClassName(ZARBAN_GAMEBOARD_CLASS)[0];
+    const controls = container.getElementsByClassName(ZARBAN_CONTROLS_CLASS)[0];
+    strings.description = strings.description.map((s) => s.length == 0 ? "<br/>" : s);
+    const newBtn = document.createElement("a");
+    newBtn.setAttribute("href", "#");
+    newBtn.innerHTML = "[ New Game ]";
+    newBtn.style.float = "right";
+    newBtn.onclick = () => {
+      console.log("!");
+      delete localStorage[`zarban_${container.id}`];
+      container.dataZarbanPlayer = new Player$1();
+      ZarbanWebPlayer.draw(container);
+    };
+    gameboard.innerHTML = "";
+    gameboard.appendChild(newBtn);
+    const title = document.createElement("h4");
+    title.innerHTML = strings.title;
+    gameboard.appendChild(title);
+    strings.description.map((l) => {
+      const p = document.createElement("p");
+      p.innerHTML = l;
+      return p;
+    }).map((p) => gameboard.appendChild(p));
+    controls.innerHTML = "";
+    for (const i in strings.options) {
+      const link = document.createElement("a");
+      link.setAttribute("href", "#");
+      link.innerHTML = `> ${strings.options[i]}`;
+      link.onclick = () => {
+        ZarbanWebPlayer.next(container, parseInt(i) + 1);
+      };
+      controls.appendChild(link);
+    }
+  }
+  static next(container, option) {
+    container.dataZarbanPlayer.nextStory(option);
+    ZarbanWebPlayer.draw(container);
+    ZarbanWebPlayer.save(container);
+  }
+}
+globalThis.Zarban = {
+  Player: Player$1,
+  Interface,
+  WebPlayer: ZarbanWebPlayer
+};
 globalThis.extension = () => {
   new Player();
   return {
@@ -3839,8 +3924,4 @@ globalThis.extension = () => {
       "my_decorator": "my_decorator"
     }
   };
-};
-globalThis.Zarban = {
-  Player,
-  Interface
 };

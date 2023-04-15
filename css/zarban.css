@@ -5,37 +5,29 @@ html,body {
     font-size: 1em;
 }
 
-#zarban_gameboard {
+.zarban_gameboard {
     border: 1px solid #00AA20;
     border-width: 4px;
     border-style: double;
     padding: 10px;
 }
 
-#zarban_gameboard h4 {
+.zarban_gameboard h4 {
     border-bottom: 1px solid #00AA20;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 
-#zarban_cursor {
-    margin-top: 1em;
-    animation: blinker 1s step-start infinite;
-}
-  
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
-a {
+ a {
     background-color: #333;
     color: #00AA20;
     font-family: "Lucida Console", "Courier New", monospace;
     display: block;
-    margin-top: 10px;
     font-size: 1em;
     text-decoration: none;
+}
+
+.zarban_controls a {
+    margin-top: 10px;
 }
 
 a:hover {

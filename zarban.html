@@ -3,6 +3,10 @@ layout: zarban
 permalink: /zarban/
 title: Zarban's Grotto
 ---
-<div id="zarban_gameboard"></div>
-<div id="zarban_buttons"></div>
-<div id="zarban_cursor"></div>
+<div id="zarban_container"></div>
+
+<script type="module" src="/js/zarbans_grotto.js"></script>
+<script type="module" type="text/javascript">
+  const container = document.getElementById('zarban_container');
+  Zarban.WebPlayer.init(container);
+</script>
