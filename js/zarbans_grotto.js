@@ -853,19 +853,19 @@ const chapters = [
       intro_cave5_brave: {
         text: [
           "You follow the footprints to a nearby village, and arrive just as dawn breaks.",
-          "The footprints lead into a small tavern, but many footprints coming and going make it impossible to tell what happened next.",
+          "The footprints lead into the village, but too many footprints coming and going make it impossible to tell what happened next.",
           "",
           "One thing you can be sure of, however; you still sense Zarban's evil aura - you are sure he is still hiding out somewhere in this very town",
           "Likely having replaced one of the sleepy village's unsuspecting peasants.",
-          "You are exausted from searching through the night, and could use a pick-me-up"
+          "You are exausted from searching through the night, and could use a pick-me-up."
         ],
         effects: [],
         options: [
           {
-            prompt: "Enter the tavern",
+            prompt: "Look around",
             conditions: [],
             results: [
-              "tavern_enter"
+              "village"
             ]
           }
         ]
@@ -873,12 +873,9 @@ const chapters = [
       intro_cave5_tavern: {
         text: [
           "You walk to a tavern in a nearby village, and arrive just as dawn breaks.",
-          "Coincidentally this seems to be exactly what Zarban did earlier, judging by the footprints you are now unwillingly following",
-          "The prints certainly enter the tavern, but many footprints coming and going make it impossible to tell what happened next.",
           "",
-          "One thing you can be sure of, however; you still sense Zarban's evil aura - you are sure he is still hiding out somewhere in this very town",
-          "Likely having replaced one of the sleepy village's unsuspecting peasants.",
-          "You are exausted from searching through the night, and could use a pick-me-up"
+          "As you approach the village, you once again sense Zarban's evil aura - you are sure he is hiding out somewhere in this very town",
+          "Likely having replaced one of the sleepy village's unsuspecting peasants."
         ],
         effects: [],
         options: [
@@ -1563,7 +1560,7 @@ const chapters = [
       },
       village: {
         text: [
-          "You exit the tavern and walk to the main road crossing the small village. A nearby sign identifies the town as Rothsten."
+          "You stand on the main road crossing the village. A nearby sign identifies the town as Rothsten."
         ],
         effects: [
           {
