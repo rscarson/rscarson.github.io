@@ -256,17 +256,6 @@ class LavendeuxValue {
     return new LavendeuxArray(value).toValue();
   }
 }
-globalThis.myFunction = (args, _state) => {
-  if (args.length != 1) {
-    throw new Error("myFunction(n): expected 1 argument");
-  }
-  let inputValue = LavendeuxValue.asInteger(args[0]);
-  return LavendeuxValue.returnString(inputValue.toString());
-};
-globalThis.myDecorator = (value) => {
-  let input = LavendeuxValue.asInteger(value);
-  return `${input}`;
-};
 class PlayerChoices {
   constructor(json = {}) {
     Object.assign(this, JSON.parse(JSON.stringify(
@@ -913,6 +902,17 @@ const chapters = [
             prompt: "Leave the tavern",
             conditions: [],
             results: [
+              {
+                conditions: [
+                  {
+                    type: "status",
+                    target: "stamina",
+                    operation: "eq",
+                    value: 0
+                  }
+                ],
+                target: "village_ending_stamina"
+              },
               "village"
             ]
           }
@@ -993,6 +993,17 @@ const chapters = [
             prompt: "Leave the tavern",
             conditions: [],
             results: [
+              {
+                conditions: [
+                  {
+                    type: "status",
+                    target: "stamina",
+                    operation: "eq",
+                    value: 0
+                  }
+                ],
+                target: "village_ending_stamina"
+              },
               "village"
             ]
           }
@@ -1023,33 +1034,23 @@ const chapters = [
             prompt: "I could use a refreshing drink",
             conditions: [],
             results: [
+              {
+                conditions: [
+                  {
+                    type: "status",
+                    target: "alcoholism",
+                    value: 1,
+                    operation: "eq"
+                  }
+                ],
+                target: "tavern_ending_alcoholic"
+              },
               "tavern_bartender_shots"
             ]
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1080,28 +1081,7 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1127,28 +1107,7 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1184,28 +1143,7 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1234,29 +1172,15 @@ const chapters = [
             ]
           },
           {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
+            prompt: "Ask if he's seen anything unusual",
+            conditions: [],
             results: [
-              "tavern_ending_alcoholic"
+              "tavern_lurker_unusual"
             ]
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1278,28 +1202,29 @@ const chapters = [
         options: [
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
+            conditions: [],
             results: [
-              "tavern_ending_alcoholic"
+              "tavern"
+            ]
+          }
+        ]
+      },
+      tavern_lurker_unusual: {
+        text: [
+          `"Wouldn't know nothin' about that, stranger. Leave me be."`
+        ],
+        effects: [],
+        options: [
+          {
+            prompt: "Ask him more questions",
+            conditions: [],
+            results: [
+              "tavern_lurker"
             ]
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1323,28 +1248,7 @@ const chapters = [
         options: [
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1379,29 +1283,15 @@ const chapters = [
             ]
           },
           {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
+            prompt: "Ask if he's seen anything unusual",
+            conditions: [],
             results: [
-              "tavern_ending_alcoholic"
+              "tavern_farmer_unusual"
             ]
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1423,16 +1313,24 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
+            conditions: [],
             results: [
-              "tavern_ending_alcoholic"
+              "tavern"
+            ]
+          }
+        ]
+      },
+      tavern_farmer_unusual: {
+        text: [
+          `"Unusual? Two strangers in one night is unusual. It's also annoying. Can I get back to me drink now?"`
+        ],
+        effects: [],
+        options: [
+          {
+            prompt: "Continue talking to the farmer",
+            conditions: [],
+            results: [
+              "tavern_farmer"
             ]
           },
           {
@@ -1467,28 +1365,7 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1512,28 +1389,7 @@ const chapters = [
           },
           {
             prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "eq"
-              }
-            ],
-            results: [
-              "tavern_ending_alcoholic"
-            ]
-          },
-          {
-            prompt: "Go back to your stool",
-            conditions: [
-              {
-                type: "status",
-                target: "alcoholism",
-                value: 2,
-                operation: "lt"
-              }
-            ],
+            conditions: [],
             results: [
               "tavern"
             ]
@@ -1667,17 +1523,6 @@ const chapters = [
             prompt: "Search the tavern",
             conditions: [],
             results: [
-              {
-                conditions: [
-                  {
-                    type: "status",
-                    target: "stamina",
-                    operation: "eq",
-                    value: 0
-                  }
-                ],
-                target: "village_ending_stamina"
-              },
               "tavern_enter"
             ]
           },
@@ -1746,6 +1591,13 @@ const chapters = [
         effects: [],
         options: [
           {
+            prompt: "Ask her for a potion of vampire detection",
+            conditions: [],
+            results: [
+              "village_farm_amelie_potion"
+            ]
+          },
+          {
             prompt: "Ask her about her family",
             conditions: [],
             results: [
@@ -1771,6 +1623,22 @@ const chapters = [
             conditions: [],
             results: [
               "village_farm"
+            ]
+          }
+        ]
+      },
+      village_farm_amelie_potion: {
+        text: [
+          `The woman looks at you confused; "Is that a real potion? I'm afraid I wouldn't know how to make this." The young woman replies`,
+          '"I have a potion to cure rhumatism, if that interests you, or the best salve for warts this side of the continent!"'
+        ],
+        effects: [],
+        options: [
+          {
+            prompt: "Ask her something else",
+            conditions: [],
+            results: [
+              "village_farm_amelie"
             ]
           }
         ]
@@ -2065,6 +1933,13 @@ const chapters = [
             ]
           },
           {
+            prompt: "Ask if they've seen anything unusual",
+            conditions: [],
+            results: [
+              "village_mill_unusual"
+            ]
+          },
+          {
             prompt: "Leave the mill",
             conditions: [],
             results: [
@@ -2077,6 +1952,22 @@ const chapters = [
         text: [
           `"We're the Fouchers sir - Nils and Silvia. Our family's been in these parts since the colonial days of the Order."`,
           `"We've 3 little 'uns - Dylan is 8, and the twins are fresh out the oven."`
+        ],
+        effects: [],
+        options: [
+          {
+            prompt: "Ask something else",
+            conditions: [],
+            results: [
+              "village_mill"
+            ]
+          }
+        ]
+      },
+      village_mill_unusual: {
+        text: [
+          '"Not a thing of interest has happened in these here parts in many a year, sir."',
+          `"If it's adventure ye' seek, you've picked the wrong village I'm afraid."`
         ],
         effects: [],
         options: [
@@ -2196,6 +2087,23 @@ const chapters = [
             ]
           },
           {
+            prompt: "Ask if she's seen anything unusual",
+            conditions: [],
+            results: [
+              {
+                conditions: [
+                  {
+                    type: "choices",
+                    target: "insulted_teacher",
+                    value: true
+                  }
+                ],
+                target: "village_school_items"
+              },
+              "village_school_unusual"
+            ]
+          },
+          {
             prompt: "Ask about the strange items in her home",
             conditions: [
               {
@@ -2246,6 +2154,21 @@ const chapters = [
             value: true
           }
         ],
+        options: [
+          {
+            prompt: "Ask something else",
+            conditions: [],
+            results: [
+              "village_school_inside"
+            ]
+          }
+        ]
+      },
+      village_school_unusual: {
+        text: [
+          '"Besides the usual nonsense from that horrible Brolette girl? Not in a long time."'
+        ],
+        effects: [],
         options: [
           {
             prompt: "Ask something else",
@@ -3712,6 +3635,7 @@ let Player$1 = class Player2 {
       if (story !== false) {
         this.currentChapter = chapter;
         this.currentStory = story;
+        this.isNewGame = story_key == this.entrypoint;
         for (const effect of story.effects) {
           effect.apply(this);
         }
@@ -3840,73 +3764,195 @@ class Interface {
 }
 const ZARBAN_GAMEBOARD_CLASS = "zarban_gameboard";
 const ZARBAN_CONTROLS_CLASS = "zarban_controls";
-class ZarbanWebPlayer {
-  static init(container) {
-    const gameBoard = document.createElement("div");
-    gameBoard.className = ZARBAN_GAMEBOARD_CLASS;
-    container.appendChild(gameBoard);
-    const gameControls = document.createElement("div");
-    gameControls.className = ZARBAN_CONTROLS_CLASS;
-    container.appendChild(gameControls);
-    container.dataZarbanPlayer = new Player$1();
-    ZarbanWebPlayer.restore(container);
+class InlineElement {
+  constructor(tag) {
+    this.e = document.createElement(tag);
   }
-  static save(container) {
-    localStorage[`zarban_${container.id}`] = container.dataZarbanPlayer.save();
+  setAttribute(name, value) {
+    this.e.setAttribute(name, value);
+    return this;
   }
-  static restore(container) {
-    const data = localStorage[`zarban_${container.id}`];
-    if (data) {
-      container.dataZarbanPlayer = Player$1.restore(data);
-    }
-    ZarbanWebPlayer.draw(container);
+  setInnerHTML(value) {
+    this.e.innerHTML = value;
+    return this;
   }
-  static draw(container) {
-    const strings = Interface.getInterfaceStrings(container.dataZarbanPlayer);
-    const gameboard = container.getElementsByClassName(ZARBAN_GAMEBOARD_CLASS)[0];
-    const controls = container.getElementsByClassName(ZARBAN_CONTROLS_CLASS)[0];
+  setOnClick(handler) {
+    this.e.onclick = handler;
+    return this;
+  }
+  setStyle(name, value) {
+    this.e.style[name] = value;
+    return this;
+  }
+  element() {
+    return this.e;
+  }
+}
+class ZarbanWebRunner {
+  constructor(container) {
+    this.container = container;
+    this.createInterface();
+    this.player = new Player$1();
+    this.restore();
+    this.container.dataZarbanRunner = this;
+  }
+  draw() {
+    const strings = Interface.getInterfaceStrings(this.player);
+    const gameboard = this.container.getElementsByClassName(ZARBAN_GAMEBOARD_CLASS)[0];
+    const controls = this.container.getElementsByClassName(ZARBAN_CONTROLS_CLASS)[0];
     strings.description = strings.description.map((s) => s.length == 0 ? "<br/>" : s);
-    const newBtn = document.createElement("a");
-    newBtn.setAttribute("href", "#");
-    newBtn.innerHTML = "[ New Game ]";
-    newBtn.style.float = "right";
-    newBtn.onclick = () => {
-      console.log("!");
-      delete localStorage[`zarban_${container.id}`];
-      container.dataZarbanPlayer = new Player$1();
-      ZarbanWebPlayer.draw(container);
-    };
     gameboard.innerHTML = "";
-    gameboard.appendChild(newBtn);
-    const title = document.createElement("h4");
-    title.innerHTML = strings.title;
-    gameboard.appendChild(title);
+    gameboard.appendChild(
+      new InlineElement("a").setAttribute("href", "#").setStyle("float", "right").setInnerHTML("[ New Game ]").setOnClick(() => this.reset()).element()
+    );
+    gameboard.appendChild(
+      new InlineElement("h4").setInnerHTML(strings.title).element()
+    );
     strings.description.map((l) => {
-      const p = document.createElement("p");
-      p.innerHTML = l;
-      return p;
-    }).map((p) => gameboard.appendChild(p));
-    controls.innerHTML = "";
+      gameboard.appendChild(
+        new InlineElement("p").setInnerHTML(l).element()
+      );
+    });
+    const control_p = document.createElement("p");
+    control_p.innerHTML = "What do you do?<br/>";
     for (const i in strings.options) {
-      const link = document.createElement("a");
-      link.setAttribute("href", "#");
-      link.innerHTML = `> ${strings.options[i]}`;
-      link.onclick = () => {
-        ZarbanWebPlayer.next(container, parseInt(i) + 1);
-      };
-      controls.appendChild(link);
+      control_p.appendChild(
+        new InlineElement("a").setAttribute("href", "#").setInnerHTML(`> ${strings.options[i]}`).setOnClick(() => this.next(parseInt(i) + 1)).element()
+      );
     }
+    controls.innerHTML = "";
+    controls.appendChild(control_p);
   }
-  static next(container, option) {
-    container.dataZarbanPlayer.nextStory(option);
-    ZarbanWebPlayer.draw(container);
-    ZarbanWebPlayer.save(container);
+  /**
+   * Advance the story
+   * @param {int} option 
+   */
+  next(option) {
+    this.player.nextStory(option);
+    this.draw();
+    this.save();
+  }
+  /**
+   * Create the container divs for the game
+   */
+  createInterface() {
+    this.container.innerHTML = "";
+    this.container.appendChild(
+      new InlineElement("div").setAttribute("class", ZARBAN_GAMEBOARD_CLASS).element()
+    );
+    this.container.appendChild(
+      new InlineElement("div").setAttribute("class", ZARBAN_CONTROLS_CLASS).element()
+    );
+  }
+  /**
+   * Save the game state to local storage
+   */
+  save() {
+    localStorage[`zarban_${this.container.id}`] = this.player.save();
+  }
+  /**
+   * Save the game state to local storage
+   */
+  restore() {
+    const data = localStorage[`zarban_${this.container.id}`];
+    if (data && !this.isNewGame) {
+      this.player = Player$1.restore(data);
+    }
+    this.draw();
+  }
+  /**
+   * Reset the game board
+   */
+  reset() {
+    this.player = new Player$1();
+    this.save();
+    this.draw();
+  }
+}
+class ZarbanConsoleRunner {
+  constructor(reader) {
+    this.player = new Player$1();
+    this.interface = reader;
+  }
+  draw(error = false) {
+    const strings = Interface.getInterfaceStrings(this.player);
+    const box = Interface.getTitledBox(strings.title, strings.description);
+    console.clear();
+    console.log("");
+    console.log(box.join("\n"));
+    console.log("");
+    error && console.log("Invalid option!");
+    console.log("What do you do? Type restart to begin a new game.");
+    for (const i in strings.options) {
+      console.log(`${parseInt(i) + 1}) ${strings.options[i]}`);
+    }
+    process.stdout.write("\n> ");
+  }
+  /**
+   * Advance the story
+   * @param {int} option 
+   */
+  next(option) {
+    this.draw(!this.player.nextStory(option));
+  }
+  /**
+   * Start the main game loop
+   */
+  loop() {
+    this.draw();
+    const f = async () => {
+      for await (const line of this.interface) {
+        if (line == "restart") {
+          this.player = new Player$1();
+          this.draw();
+        } else {
+          const option = parseInt(line);
+          this.next(option);
+        }
+      }
+    };
+    f();
+  }
+}
+class ZarbanLavendeuxRunner {
+  constructor(save_data) {
+    this.player = save_data ? Player$1.restore(save_data) : new Player$1();
+  }
+  draw(error = false) {
+    const strings = Interface.getInterfaceStrings(this.player);
+    const box = Interface.getTitledBox(strings.title, strings.description);
+    return [
+      "",
+      ...box,
+      error ? "\nInvalid option!" : "",
+      "What do you do?",
+      ...strings.options.map((i, o) => `${i + 1}) ${o}`),
+      "",
+      'You can type an option from above, such as "1 @zarban" or start a new game with "start @zarban" or "restart @zarban"',
+      ""
+    ].join("\n");
+  }
+  /**
+   * Advance the story
+   * @param {string} option 
+   */
+  next(option) {
+    return this.draw(!this.player.nextStory(parseInt(option)));
+  }
+  /** 
+   * Return save data string 
+   * @returns String
+  */
+  save() {
+    return this.player.save();
   }
 }
 globalThis.Zarban = {
   Player: Player$1,
   Interface,
-  WebPlayer: ZarbanWebPlayer
+  WebPlayer: ZarbanWebRunner,
+  ConsolePlayer: ZarbanConsoleRunner,
+  LavendeuxPlayer: ZarbanLavendeuxRunner
 };
 globalThis.extension = () => {
   new Player();
@@ -3915,10 +3961,41 @@ globalThis.extension = () => {
     author: `${author}`,
     version: `${version}`,
     functions: {
-      "my_function": "myFunction"
+      "zarban": "functionZarban",
+      "Zarban": "functionZarban"
     },
     decorators: {
-      "my_decorator": "my_decorator"
+      "zarban": "decoratorZarban",
+      "Zarban": "decoratorZarban"
     }
   };
+};
+globalThis.decoratorZarban = (value) => {
+  let state = getState ? getState() : {};
+  let option = LavendeuxValue.asString(value);
+  let isNewGame = ["start", "restart"].contains(value.toLowerCase());
+  if (isNewGame) {
+    const game = new Zarban.LavendeuxPlayer();
+    return game.draw();
+  } else {
+    const game = new Zarban.LavendeuxPlayer(state.zarban_save);
+    state.zarban_save = game.save();
+    setState && setState(state);
+    return game.next(option);
+  }
+};
+globalThis.functionZarban = (args) => {
+  let state = getState ? getState() : {};
+  if (args.length != 1) {
+    throw new Error("zarban(n): expected 1 argument");
+  }
+  let value = LavendeuxValue.asString(args[0]);
+  let isNewGame = ["start", "restart"].contains(value.toLowerCase());
+  if (isNewGame) {
+    const game = new Zarban.LavendeuxPlayer();
+    return LavendeuxValue.returnString(game.draw());
+  } else {
+    const game = new Zarban.LavendeuxPlayer(state.zarban_save);
+    return LavendeuxValue.returnString(game.next(value));
+  }
 };
