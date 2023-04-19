@@ -19,5 +19,12 @@
 		"description": "A Lavendeux extension for manipulating HTML colour codes",
 		"github": "https://github.com/rscarson/lavendeux-colour",
 		"download": "https://github.com/rscarson/lavendeux-colour/releases/latest/download/lavendeux-colour.js"
+	},
+	{
+		"name": "Zarban's Grotto",
+		"author": "rscarson",
+		"description": "A text-based adventure game",
+		"github": "https://github.com/rscarson/zarbans-grotto",
+		"download": "https://github.com/rscarson/zarbans-grotto/releases/latest/download/zarbans_grotto.js"
 	}
 ]
