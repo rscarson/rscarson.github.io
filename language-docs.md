@@ -1,3 +1,8 @@
+---
+layout: lavendeux
+permalink: /lavendeux/docs
+title: Lavendeux Syntax Documentation
+---
 # Lavendeux - Language Documentation
 
 This document will provide information on lavendish, a language focused on short, single-line expressions designed to manipulate values.
