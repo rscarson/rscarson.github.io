@@ -1,6 +1,6 @@
 [
 	{
-		"name": "1.0.0-alpha.1",
+		"name": "0.2.0",
 		"changelog": [
 			"Ground-up rewrite",
 			"Brand new, more powerful parser",
@@ -9,12 +9,12 @@
 			"Automatic updater"
 		],
 		"downloads": {
-			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha.1/lavendeux_1.0.0-alpha.1_x64_en-US.msi.zip",
-			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha.1/lavendeux.exe",
-			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha.1/lavendeux_1.0.0-alpha.1_amd64.deb.zip",
-			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha.1/lavendeux_1.0.0-alpha.1_amd64.appimage.zip",
-			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v1.0.0-alpha.1",
-			"source": "https://github.com/rscarson/Lavendeux/archive/v1.0.0-alpha.1.tar.gz"
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux_0.2.0_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux.exe",
+			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux_0.2.0_amd64.deb.zip",
+			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux_0.2.0_amd64.appimage.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v0.2.0",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v0.2.0.tar.gz"
 		}
 	},
 
