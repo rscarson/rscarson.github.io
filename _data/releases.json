@@ -1,5 +1,24 @@
 [
 	{
+		"name": "1.0.0-alpha1",
+		"changelog": [
+			"Ground-up rewrite",
+			"Brand new, more powerful parser",
+			"More powerful extensions",
+			"Massively improved UI",
+			"Automatic updater"
+		],
+		"downloads": {
+			"win_install": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha1/lavendeux_1.0.0-alpha1_x64_en-US.msi.zip",
+			"win_zip": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha1/lavendeux.exe",
+			"linux_deb": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha1/lavendeux_1.0.0-alpha1_amd64.deb.zip",
+			"linux_appimage": "https://github.com/rscarson/Lavendeux/releases/download/v1.0.0-alpha1/lavendeux_1.0.0-alpha1_amd64.appimage.zip",
+			"github": "https://github.com/rscarson/Lavendeux/releases/tag/v1.0.0-alpha1",
+			"source": "https://github.com/rscarson/Lavendeux/archive/v1.0.0-alpha1.tar.gz"
+		}
+	},
+
+	{
 		"name": "0.20.2",
 		"changelog": [
 			"Update Enigo",
