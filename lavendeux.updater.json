@@ -1,10 +1,10 @@
 {
-    "version": "0.2.0",
+    "version": "0.30.0",
     "pub_date": "2024-01-11T17:10:30Z",
     "platforms": {
         "windows-x86_64": {
             "signature": "Content of app-setup.nsis.sig or app.msi.sig, depending on the chosen format",
-            "url": "https://github.com/rscarson/Lavendeux/releases/download/v0.2.0/lavendeux_0.2.0_x64_en-US.msi.zip"
+            "url": "https://github.com/rscarson/Lavendeux/releases/download/v0.30.0/lavendeux_0.30.0_x64_en-US.msi.zip"
         }
     }
 }
