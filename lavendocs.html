@@ -358,7 +358,8 @@ The hierarchy is as follows (from lowest to highest priority):</p>
 <p>Note that range is not included, since it can only be compared to itself, or to arrays.</p>
 <p>So for example, if you add an int to a float, the result will be a float.
 Some types can also be grouped together, like <code>int</code> (see aboove), or <code>numeric</code> (which includes all numeric types),
-and <code>collection</code> (which includes range, string, array and object). ‘any’ is the implicit type that includes everything.</p>
+and <code>collection</code> (which includes range, string, array and object).
+‘any’ is the implicit type that includes everything.</p>
 <p>The names of the types, for the most part, are self-explanatory, but here’s a quick rundown:
 <code>bool</code> - A single-bit truth value
 <code>int</code> - A signed or unsigned integer of various sizes (<code>u8</code> to <code>i64</code>)
@@ -408,8 +409,8 @@ When cast to a string, it will be formatted as a decimal number. For other forma
 .2; // 0.2
 3e+7; // 30,000,000
 </code></pre></div><h2 id="fixed"><a href="#fixed">1.4 fixed</a></h2>
-<p>A fixed-point decimal value. Fixed literals are suffixed with <code>D</code>.</p>
-<p>Note that fixed-point exponentiation is not supported, and will result in an implicit cast to float.</p>
+<p>A fixed-point decimal value. Fixed literals are suffixed with <code>D</code>.
+Note that fixed-point exponentiation is not supported, and will result in an implicit cast to float.</p>
 <p><strong>Casting:</strong>
 It can be cast from and to any type, and from any numeric type.</p>
 <p><strong>Formatting:</strong>
