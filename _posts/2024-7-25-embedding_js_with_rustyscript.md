@@ -1,3 +1,8 @@
+---
+layout: default
+title:  "Embedding a Javascript or Typescript component into your Rust project"
+---
+
 # Embedding a Javascript or Typescript component into your Rust project
 ---
 
