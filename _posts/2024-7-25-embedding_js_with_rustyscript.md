@@ -9,6 +9,7 @@ Embedding a scripted component into your project can be daunting; but it does no
 In this post I will demonstrate a quick and easy way to embed a fully functional Javascript runtime into a rust project, complete with transpiling from Typescript, and even sandboxing the runtime from the host.
 
 -----
+&nbsp;
 
 ### The Javascript v8 runtime
 The v8 runtime has been brought to the Rust ecosystem by the [Deno project](https://deno.com/). 
@@ -77,6 +78,7 @@ let value: i64 = module.call("getValue", json_args!())?;
 ```
 
 -----
+&nbsp;
 
 Putting it all together we get this:
 
@@ -170,6 +172,7 @@ Alternatively, we can could have called `GetValue` directly, even though it is m
 runtime.call_function(Some(&main_handle), "getValue", json_args!())?;
 ```
 -----
+&nbsp;
 
 The final code looks like this:
 
