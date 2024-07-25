@@ -1,9 +1,9 @@
 ---
 layout: default
-title:  "Embedding a Javascript component into your Rust project"
+title:  "Embedding a javascript component into your Rust project"
 ---
 
-# Embedding a Javascript component into your Rust project
+# Embedding a javascript component into your Rust project
 Embedding a scripted component into your project can be daunting; but it does not need to be complicated or time-consuming.
 
 In this post I will demonstrate a quick and easy way to embed a fully functional Javascript runtime into a rust project, complete with transpiling from Typescript, and even sandboxing the runtime from the host.
@@ -146,7 +146,7 @@ Now we can include our static module:
 The `call_entrypoint` function will call our module's setValue function for us:  
 - The module's default export was found and a reference to it stored in advance on load so that this function call can be made with less overhead.
 
-Just like before, `::<Undefined` means we do not care if the function returns a result.
+Just like before, `::<Undefined>` means we do not care if the function returns a result.
 
 Now that we have a runtime, let's add a second module that can make use of it! We'll name this file `use_value.js`
 
