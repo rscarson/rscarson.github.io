@@ -4,18 +4,16 @@ title:  "Embedding a Javascript or Typescript component into your Rust project"
 ---
 
 # Embedding a Javascript or Typescript component into your Rust project
----
+#### If you need to integrate a scripted component into your latest project, don't worry; it does not need to be complicated.
 
-If you need to integrate a scripted component into your latest project, don't worry; it does not need to be complicated.
-
-## The Javascript v8 runtime
+### The Javascript v8 runtime
 The v8 runtime has been brought to the Rust ecosystem by the [Deno project](https://deno.com/).
 
 However, the v8 engine it relies on (and by extension the Deno core itself) comes equipped with its fair share of pitfalls and gotchas.
 
 Enter rustyscript - a Deno API wrapper designed to abstract away the v8 engine details, and allow you to operate directly on Rust types when working with javascript modules.
 
-## Rustyscript -- Effortless JS integration for Rust
+### Rustyscript -- Effortless JS integration for Rust
 [The rustyscript crate](https://crates.io/crates/rustyscript) is how I will be using the javascript runtime in this article - it is a Deno API wrapper for Rust that aims to prevent the common pitfalls and complications of using the v8 engine from Rust.
 
 It will take care of details such as: 
@@ -27,7 +25,7 @@ It will take care of details such as:
 
 rustyscript will also sandbox the code from the host machine by default, blocking access to the filesystem, as well as network and timer resources.
 
-## Our first runtime
+### Our first runtime
 
 Let's spin up a basic JS runtime, and try to run some javascript.
 
@@ -87,7 +85,7 @@ fn main() -> Result<(), Error> {
 }
 ```
 
-## A more comprehensive example
+### A more comprehensive example
 
 But one ES module does not an ecosystem make. So let's try it again, but this time we will add more options to our runtime, and manage our errors a little better.
 
@@ -206,7 +204,7 @@ fn main() -> Result<(), Error> {
 }
 ```
 
-## Conclusion
+### Conclusion
 
 Embedding a JS or TS component into Rust does not have to be difficult or time-consuming.
 
