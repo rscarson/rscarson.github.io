@@ -30,7 +30,9 @@ rustyscript will also sandbox the code from the host machine by default, blockin
 
 Let's spin up a basic JS runtime, and try to run some javascript.
 
-First, we will need something to run - let's use typescript in this example. *It's important to know that when transpiling, rustyscript will not perform type-checking. If you want to preserve strong-typing you will need to check the argument types yourself.*
+First, we will need something to run - let's use typescript in this example. 
+
+*Note: When transpiling, rustyscript will not perform type-checking. If you want to preserve strong-typing you will need to check the argument types yourself.*
 
 The typescript below - let's call it `get_value.ts` - sets up a simple API; one function sets up an internal value, and another retrieves that value:
 
