@@ -27,7 +27,7 @@ It will take care of details such as:
 - Deserializing return values back into Rust types.
 - Setting up Deno's extensions
 
-rustyscript will also sandbox the code from the host machine by default, blocking access to the filesystem, as well as network and timer resources.
+Rustyscript will also sandbox the code from the host machine by default, blocking access to the filesystem, as well as network resources.
 
 -----
 &nbsp;
