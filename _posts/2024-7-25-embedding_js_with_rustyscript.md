@@ -74,6 +74,8 @@ We will get an `Error::JsonDecode` if the wrong type is returned by javascript:
 let value: i64 = module.call("getValue", json_args!())?;
 ```
 
+---
+
 Putting it all together we get this:
 
 ```rust
@@ -104,7 +106,7 @@ const API_MODULE: StaticModule = module!(
   "get_value.ts",
   "
     let my_internal_value: number;
-    export const getValue = (): number => my_internal_value;
+    export const getValue = async (): Promise<number> => new Promise((resolve) => setTimeout(() => resolve(my_internal_value), 10));
     export const setValue = (value: number) => my_internal_value = value * 2;
 
     export default setValue;
@@ -127,8 +129,8 @@ fn main() -> Result<(), Error> {
 Now we can include our static module:
 
 ```rust
-  let module_handle = runtime.load_module(&API_MODULE.to_module())?;
-  runtime.call_entrypoint::<Undefined>(&module_handle, json_args!(2))?;
+  let main_handle = runtime.load_module(&API_MODULE.to_module())?;
+  runtime.call_entrypoint::<Undefined>(&main_handle, json_args!(2))?;
 
   Ok(())
 }
@@ -142,36 +144,30 @@ Just like before, `::<Undefined` means we do not care if the function returns a 
 Now that we have a runtime, let's add a second module that can make use of it! We'll name this file `use_value.js`
 
 ```javascript
-import * as get_value from './get_value.ts';
-
-// We will get the value set up for us by the runtime, and transform it
-// into a string!
-let value = get_value.getValue();
-export const final_value = `$${value.toFixed(2)}`;
+import getValue from './get_value.ts';
+export const static_value = `${await getValue()}`;
 ```
 
-Now let's add the following to `main()`, right before the `Ok(())` at the bottom:
+Now add the following to `main()`, right before the `Ok(())` at the bottom:
 
 ```rust
-let handle = runtime.load_module(&Module::load("examples/medium.js")?)?;
-let final_value: String = runtime.get_value(Some(&handle), "final_value")?;
+let handle = runtime.load_module(&Module::load("use_value.js")?)?;
+let static_value: String = runtime.get_value(Some(&handle), "static_value")?;
 ```
 
 We load our new module from the filesystem:
 - The handle that `load_module` returns is used to give context to future calls.
 - We use that returned handle to extract the const that it exports, and then we tell the compiler we'd like it as a string.
 
-Now we can check that we received back the value we expected:
+Alternatively, we can could have called `GetValue` directly, even though it is marked async:
+- `call_function` blocks the current thread, using an internal Tokio runtime
+- `call_function_async` would have returned a future we could await ourselves
+- `call_function_immediate` does not resolve events, which would allow me to get the result as a `Promise<String>` instead
 
 ```rust
-println!("The received value was {final_value}");
+runtime.call_function(Some(&main_handle), "getValue", json_args!())?;
 ```
-
-When we run our completed example, we should see a print out to the console:
-
-> The received value was $4.00
-
-Our static module was able to be imported for use by another JS module, and the JS side's API was able to be accessed by our Rust backend.
+---
 
 The final code looks like this:
 
@@ -182,11 +178,11 @@ use rustyscript::{module, StaticModule};
 const API_MODULE: StaticModule = module!(
   "get_value.ts",
   "
-  let my_internal_value: number;
-  export const getValue = (): number => my_internal_value;
-  export const setValue = (value: number) => my_internal_value = value * 2;
+    let my_internal_value: number;
+    export const getValue = async (): Promise<number> => new Promise((resolve) => setTimeout(() => resolve(my_internal_value), 10));
+    export const setValue = (value: number) => my_internal_value = value * 2;
 
-  export default setValue;
+    export default setValue;
   ");
 
 fn main() -> Result<(), Error> {
@@ -195,18 +191,16 @@ fn main() -> Result<(), Error> {
     ..Default::default()
   })?;
 
-  let module_handle = runtime.load_module(&API_MODULE.to_module())?;
-  runtime.call_entrypoint::<Undefined>(&module_handle, json_args!(2))?;
+  let main_handle = runtime.load_module(&API_MODULE.to_module())?;
+  runtime.call_entrypoint::<Undefined>(&main_handle, json_args!(2))?;
 
-  let use_value_handle = runtime.load_module(&Module::load("examples/medium.js")?)?;
-  let final_value: String = runtime.get_value(Some(&use_value_handle), "final_value")?;
+  let handle = runtime.load_module(&Module::load("use_value.js")?)?;
+  let static_value: String = runtime.get_value(Some(&handle), "static_value")?;
 
-  println!("The received value was {final_value}");
+  println!("The received value was {static_value}");
   Ok(())
 }
 ```
-
-*Note: There are also `_async` variants to most functions that instead return a Future. Additionally, you can use `_immediate`, which does not resolve events right away - it can be used to return a `Promise<T>` that can be stored for later use*
 
 ### Conclusion
 
