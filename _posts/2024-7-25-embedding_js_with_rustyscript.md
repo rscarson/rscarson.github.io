@@ -77,9 +77,6 @@ We will get an `Error::JsonDecode` if the wrong type is returned by javascript:
 let value: i64 = module.call("getValue", json_args!())?;
 ```
 
------
-&nbsp;
-
 Putting it all together we get this:
 
 ```rust
@@ -95,6 +92,9 @@ fn main() -> Result<(), Error> {
 ```
 
 This is the fastest way to interact with javascript, but by no means the only way.
+
+-----
+&nbsp;
 
 ### A more comprehensive example
 
@@ -171,8 +171,6 @@ Alternatively, we can could have called `GetValue` directly, even though it is m
 ```rust
 runtime.call_function(Some(&main_handle), "getValue", json_args!())?;
 ```
------
-&nbsp;
 
 The final code looks like this:
 
@@ -206,6 +204,9 @@ fn main() -> Result<(), Error> {
   Ok(())
 }
 ```
+
+-----
+&nbsp;
 
 ### Conclusion
 
