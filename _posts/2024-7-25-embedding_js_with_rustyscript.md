@@ -104,14 +104,8 @@ const API_MODULE: StaticModule = module!(
   "get_value.ts",
   "
     let my_internal_value: number;
-    
-    export function getValue(): number {
-      return my_internal_value;
-    }
-    
-    export function setValue(value: number) {
-      my_internal_value = value * 2;
-    }
+    export const getValue = (): number => my_internal_value;
+    export const setValue = (value: number) => my_internal_value = value * 2;
 
     export default setValue;
   ");
@@ -188,17 +182,11 @@ use rustyscript::{module, StaticModule};
 const API_MODULE: StaticModule = module!(
   "get_value.ts",
   "
-    let my_internal_value: number;
-    
-    export function getValue(): number {
-      return my_internal_value;
-    }
-    
-    export function setValue(value: number) {
-      my_internal_value = value * 2;
-    }
+  let my_internal_value: number;
+  export const getValue = (): number => my_internal_value;
+  export const setValue = (value: number) => my_internal_value = value * 2;
 
-    export default setValue;
+  export default setValue;
   ");
 
 fn main() -> Result<(), Error> {
