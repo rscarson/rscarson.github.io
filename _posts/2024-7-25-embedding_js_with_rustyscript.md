@@ -4,7 +4,8 @@ title:  "Embedding a Javascript component into your Rust project"
 ---
 
 # Embedding a Javascript component into your Rust project
-Embedding a scripted component into your project can be daunting; but it does not need to be complicated or time-consuming.  
+Embedding a scripted component into your project can be daunting; but it does not need to be complicated or time-consuming.
+
 In this post I will demonstrate a quick and easy way to embed a fully functional Javascript runtime into a rust project, complete with transpiling from Typescript, and even sandboxing the runtime from the host.
 
 ### The Javascript v8 runtime
@@ -29,7 +30,7 @@ rustyscript will also sandbox the code from the host machine by default, blockin
 
 Let's spin up a basic JS runtime, and try to run some javascript.
 
-First, we will need some JS - let's use typescript in this example. *It's important to know that when transpiling, rustyscript will not perform type-checking. If you want to preserve strong-typing you will need to check the argument types yourself.*
+First, we will need something to run - let's use typescript in this example. *It's important to know that when transpiling, rustyscript will not perform type-checking. If you want to preserve strong-typing you will need to check the argument types yourself.*
 
 The typescript below - let's call it `get_value.ts` - sets up a simple API; one function sets up an internal value, and another retrieves that value:
 
@@ -53,15 +54,14 @@ let mut module = rustyscript::import("get_value.ts")?;
 
 No really, that's it - a working JS runtime with our shiny new module imported and ready to go - We can now call our module's API at will.
 
-First, we set up our module's internal value by calling `setValue(5)` - the `::<Undefined>` here just means we don't care about what the function returns:
+First, we set up our module's internal value by calling `setValue(5)`
+- `::<Undefined>` here just means we don't care about what the function returns
+- `json_args!` is a macro taking in a comma-separated list of serializable Rust values we can send to javascript
 
 ```rust
 use rustyscript::{json_args, Undefined};
-
 module.call::<Undefined>("setValue", json_args!(5))?;
 ```
-
-`json_args!` is a macro taking in a comma-separated list of Rust primitives to turn them into serialized values we can send to javascript.
 
 Now we can get our value back out. 
 
