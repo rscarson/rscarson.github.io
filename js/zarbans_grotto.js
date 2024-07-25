@@ -3803,7 +3803,19 @@ class ZarbanWebRunner {
     strings.description = strings.description.map((s) => s.length == 0 ? "<br/>" : s);
     gameboard.innerHTML = "";
     gameboard.appendChild(
-      new InlineElement("a").setAttribute("href", "#").setStyle("float", "right").setInnerHTML("[ New Game ]").setOnClick(() => this.reset()).element()
+      new InlineElement("a")
+        .setAttribute("href", "#")
+        .setStyle("float", "right")
+        .setInnerHTML("[ New Game ]")
+        .setOnClick(() => this.reset())
+        .element()
+    );
+    gameboard.appendChild(
+      new InlineElement("a")
+        .setAttribute("href", "https://github.com/rscarson/zarbans-grotto")
+        .setStyle("float", "right")
+        .setInnerHTML("[ GitHub ]")
+        .element()
     );
     gameboard.appendChild(
       new InlineElement("h4").setInnerHTML(strings.title).element()
