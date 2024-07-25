@@ -1,16 +1,32 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: @rscarson
+author: rscarson
 
-# Site settings
-title: @rscarspm
-baseurl: "blog" # the subpath of your site, e.g. /blog
-url: "https://rscarson.github.io/" # the base hostname & protocol for your site
-twitter_username: rscarson
-github_username:  rscarson
+navbar-links:
+  Home: "https://rscarson.github.io/"
+  Projects:
+    - Zarban's Grotto: "https://rscarson.github.io/zarban/"
+    - Lavendeux: "https://github.com/rscarson/Lavendeux"
+
+social-network-links:
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  github: rscarson
+  twitter: rscarson
+
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  reddit: true
+
+post_search: true
+edit_page_button: true
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+baseurl: "blog" 
+url: "https://rscarson.github.io/"
+
 
 # Build settings
 markdown: kramdown
