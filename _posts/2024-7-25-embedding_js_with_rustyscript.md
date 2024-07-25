@@ -65,7 +65,8 @@ module.call::<Undefined>("setValue", json_args!(5))?;
 
 Now we can get our value back out. 
 
-Since now we do care about what type we get, we tell the compiler to deserialize the JS function's return value as an i64. We will get an `Error::JsonDecode` if the wrong type is returned by javascript:
+Since now we do care about what type we get, we tell rustyscript to deserialize the JS function's return value as an i64.  
+We will get an `Error::JsonDecode` if the wrong type is returned by javascript:
 
 ```rust
 let value: i64 = module.call("getValue", json_args!())?;
@@ -85,11 +86,14 @@ fn main() -> Result<(), Error> {
 }
 ```
 
+This is the fastest way to interact with javascript, but by no means the only way.
+
 ### A more comprehensive example
 
-But one ES module does not an ecosystem make. So let's try it again, but this time we will add more options to our runtime, and manage our errors a little better.
+Let's try it again, but this time we will add more options to our runtime.
 
-Let's embed our TS module into the executable directly; after all, it is a very small file we will always need - why take the extra hit from filesystem overhead?
+First, we will embed our module into the executable directly; after all;  
+it is a very small file we will always need - why take the overhead from the filesystem?
 
 ```rust
 use rustyscript::{module, StaticModule};
@@ -111,13 +115,17 @@ const API_MODULE: StaticModule = module!(
   ");
 ```
 
-Next, we need a runtime. There are lots of options available here but the defaults will work for us here:
+Next, we need a runtime. There are lots of options available but timeout is the only one we will use here:
+- `timeout` will force any running code to fail after it elapses. It is useful for preventing your runtime from being blocked forever
 
 ```rust
 use rustyscript::{json_args, Error, Runtime, RuntimeOptions, Undefined};
 
 fn main() -> Result<(), Error> {
-  let mut runtime = Runtime::new(RuntimeOptions::default())?;
+  let mut runtime = Runtime::new(RuntimeOptions {
+    timeout: std::time::Duration::from_millis(500),
+    ..Default::default()
+  })?;
 ```
 
 Now we can include our static module:
@@ -130,7 +138,8 @@ Now we can include our static module:
 }
 ```
 
-The `call_entrypoint` function will call our module's setValue function for us - the module's default export was found and a reference to it stored in advance on load so that this function call can be made with less overhead.
+The `call_entrypoint` function will call our module's setValue function for us:  
+- The module's default export was found and a reference to it stored in advance on load so that this function call can be made with less overhead.
 
 Just like before, `::<Undefined` means we do not care if the function returns a result.
 
@@ -148,15 +157,15 @@ export const final_value = `$${value.toFixed(2)}`;
 Now let's add the following to `main()`, right before the `Ok(())` at the bottom:
 
 ```rust
-let use_value_handle = runtime.load_module(&Module::load("examples/medium.js")?)?;
-let final_value: String = runtime.get_value(Some(&use_value_handle), "final_value")?;
+let handle = runtime.load_module(&Module::load("examples/medium.js")?)?;
+let final_value: String = runtime.get_value(Some(&handle), "final_value")?;
 ```
 
-We load our new module from the filesystem - the handle that `load_module` returns is used to give context to future calls.
+We load our new module from the filesystem:
+- The handle that `load_module` returns is used to give context to future calls.
+- We use that returned handle to extract the const that it exports, and then we tell the compiler we'd like it as a string.
 
-We use that returned handle to extract the const that it exports, and then we tell the compiler we'd like it as a string.
-
-Finally, we can check that we received back the value we expected:
+Now we can check that we received back the value we expected:
 
 ```rust
 println!("The received value was {final_value}");
@@ -191,7 +200,10 @@ const API_MODULE: StaticModule = module!(
   ");
 
 fn main() -> Result<(), Error> {
-  let mut runtime = Runtime::new(RuntimeOptions::default())?;
+  let mut runtime = Runtime::new(RuntimeOptions {
+    timeout: std::time::Duration::from_millis(500),
+    ..Default::default()
+  })?;
 
   let module_handle = runtime.load_module(&API_MODULE.to_module())?;
   runtime.call_entrypoint::<Undefined>(&module_handle, json_args!(2))?;
@@ -203,6 +215,8 @@ fn main() -> Result<(), Error> {
   Ok(())
 }
 ```
+
+*Note: There are also `_async` variants to most functions that instead return a Future. Additionally, you can use `_immediate`, which does not resolve events right away - it can be used to return a `Promise<T>` that can be stored for later use*
 
 ### Conclusion
 
